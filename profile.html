@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | SCMS</title>
+
+    <link rel="stylesheet"
+          href="css/profile.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2>SCMS</h2>
+
+        <p class="department">
+            Computer Science & Engineering
+        </p>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="students.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Students
+                </a>
+            </li>
+
+            <li>
+                <a href="attendance.html">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Attendance
+                </a>
+            </li>
+
+            <li>
+                <a href="assignments.html">
+                    <i class="fa-solid fa-book"></i>
+                    Assignments
+                </a>
+            </li>
+
+            <li>
+                <a href="marks.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Marks
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+            <li id="logout">
+                <a href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <div class="topbar">
+
+            <h1>My Profile</h1>
+
+            <p>
+                Manage your SCMS account information
+            </p>
+
+        </div>
+
+
+        <!-- PROFILE -->
+
+        <div class="profile-card">
+
+            <div class="profile-header">
+
+                <div class="avatar" id="avatar">
+                    U
+                </div>
+
+                <div>
+
+                    <h2 id="profileName">
+                        User
+                    </h2>
+
+                    <p id="profileRole">
+                        Student
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-details">
+
+                <div class="detail">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <div>
+
+                        <span>Name</span>
+
+                        <strong id="name">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <i class="fa-solid fa-id-badge"></i>
+
+                    <div>
+
+                        <span>Role</span>
+
+                        <strong id="role">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    <div>
+
+                        <span>Department</span>
+
+                        <strong>
+                            Computer Science & Engineering
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <i class="fa-solid fa-laptop-code"></i>
+
+                    <div>
+
+                        <span>System</span>
+
+                        <strong>
+                            Smart Classroom Management System
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ABOUT -->
+
+        <div class="about-card">
+
+            <h2>
+                <i class="fa-solid fa-circle-info"></i>
+                About SCMS
+            </h2>
+
+            <p>
+                Smart Classroom Management System is a
+                Computer Science related classroom project
+                designed to manage students, attendance,
+                marks and assignments in one place.
+            </p>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="js/auth.js"></script>
+
+<script src="js/profile.js"></script>
+
+</body>
+
+</html>

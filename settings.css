@@ -1,0 +1,422 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+
+    background: #111827;
+
+    padding: 25px 15px;
+}
+
+
+.sidebar h2 {
+    text-align: center;
+
+    color: #3b82f6;
+
+    font-size: 30px;
+}
+
+
+.department {
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    margin: 5px 0 30px;
+}
+
+
+.sidebar ul {
+    list-style: none;
+}
+
+
+.sidebar li {
+    margin-bottom: 8px;
+}
+
+
+.sidebar li a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+
+.sidebar li a i {
+    width: 22px;
+
+    text-align: center;
+}
+
+
+.sidebar li:hover a,
+.sidebar li.active a {
+    background: #2563eb;
+
+    color: white;
+}
+
+
+/* MAIN */
+
+.main {
+    flex: 1;
+
+    padding: 35px;
+
+    max-width: 1200px;
+}
+
+
+.topbar {
+    margin-bottom: 30px;
+}
+
+
+.topbar h1 {
+    font-size: 30px;
+}
+
+
+.topbar p {
+    color: #94a3b8;
+
+    margin-top: 5px;
+}
+
+
+/* SETTINGS CARD */
+
+.settings-card {
+    background: #1e293b;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+.settings-card h2 {
+    color: #60a5fa;
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+.settings-card h2 i {
+    margin-right: 8px;
+}
+
+
+/* ROW */
+
+.setting-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 0;
+
+    border-top: 1px solid #334155;
+}
+
+
+.setting-row h3 {
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+
+.setting-row p {
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    max-width: 600px;
+}
+
+
+/* USERNAME */
+
+.username-control {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.username-control input {
+    width: 220px;
+
+    padding: 10px;
+
+    background: #0f172a;
+
+    border: 1px solid #334155;
+
+    border-radius: 7px;
+
+    color: white;
+
+    outline: none;
+}
+
+
+.username-control button {
+    background: #2563eb;
+
+    border: none;
+
+    color: white;
+
+    padding: 10px 15px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+
+/* SWITCH */
+
+.switch {
+    position: relative;
+
+    width: 52px;
+
+    height: 28px;
+
+    flex-shrink: 0;
+}
+
+
+.switch input {
+    opacity: 0;
+
+    width: 0;
+
+    height: 0;
+}
+
+
+.slider {
+    position: absolute;
+
+    inset: 0;
+
+    cursor: pointer;
+
+    background: #475569;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+
+.slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 22px;
+
+    height: 22px;
+
+    left: 3px;
+
+    top: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+
+.switch input:checked + .slider {
+    background: #2563eb;
+}
+
+
+.switch input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
+
+/* DANGER */
+
+.danger-card {
+    border: 1px solid #7f1d1d;
+}
+
+
+.danger-card h2 {
+    color: #f87171;
+}
+
+
+.danger-button {
+    background: #dc2626;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 16px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+
+.danger-button:hover {
+    background: #b91c1c;
+}
+
+
+/* LIGHT MODE */
+
+body.light-mode {
+    background: #f1f5f9;
+
+    color: #0f172a;
+}
+
+
+body.light-mode .sidebar {
+    background: white;
+}
+
+
+body.light-mode .sidebar li a {
+    color: #475569;
+}
+
+
+body.light-mode .settings-card {
+    background: white;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+body.light-mode .setting-row {
+    border-color: #e2e8f0;
+}
+
+
+body.light-mode .setting-row p {
+    color: #64748b;
+}
+
+
+body.light-mode .username-control input {
+    background: #f8fafc;
+
+    color: #0f172a;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 75px;
+    }
+
+    .sidebar h2 {
+        font-size: 20px;
+    }
+
+    .department {
+        display: none;
+    }
+
+    .sidebar li a {
+        justify-content: center;
+
+        font-size: 0;
+    }
+
+    .sidebar li a i {
+        font-size: 16px;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .setting-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .username-control {
+        width: 100%;
+    }
+
+    .username-control input {
+        width: 100%;
+    }
+
+}

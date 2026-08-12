@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <h2>SCMS</h2>
+
+    <p class="department">Computer Science & Engineering</p>
+
+    <ul>
+
+        <!-- Dashboard -->
+        <li class="active">
+            <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+
+        <!-- Students -->
+        <li>
+            <a href="students.html">
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>Students</span>
+            </a>
+        </li>
+
+
+        <!-- Attendance -->
+        <li>
+            <a href="attendance.html">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+        </li>
+
+
+        <!-- Assignments -->
+        <li>
+            <a href="assignments.html">
+                <i class="fa-solid fa-book"></i>
+                <span>Assignments</span>
+            </a>
+        </li>
+
+
+        <!-- Marks -->
+        <li>
+            <a href="marks.html">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Marks</span>
+            </a>
+        </li>
+
+
+        <!-- Profile -->
+        <li>
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </li>
+
+
+        <!-- Settings -->
+        <li>
+            <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+        </li>
+
+
+        <!-- Logout -->
+        <li id="logout">
+            <a href="#">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- Main Content -->
+
+<div class="main">
+
+<div class="header">
+
+<h1>
+
+Welcome,
+
+<span id="userName"></span>
+
+</h1>
+
+</div>
+
+<div class="cards">
+
+<div class="stats-container">
+
+    <!-- STUDENTS -->
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+            <i class="fa-solid fa-user-graduate"></i>
+        </div>
+
+        <div>
+            <p>Total Students</p>
+
+            <h2 id="studentCount">
+                0
+            </h2>
+        </div>
+
+    </div>
+
+
+    <!-- ATTENDANCE -->
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+            <i class="fa-solid fa-calendar-check"></i>
+        </div>
+
+        <div>
+            <p>Attendance</p>
+
+            <h2 id="attendanceCount">
+                0%
+            </h2>
+        </div>
+
+    </div>
+
+
+    <!-- ASSIGNMENTS -->
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+            <i class="fa-solid fa-book"></i>
+        </div>
+
+        <div>
+            <p>Assignments</p>
+
+            <h2 id="assignmentCount">
+                0
+            </h2>
+        </div>
+
+    </div>
+
+
+    <!-- MARKS -->
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+            <i class="fa-solid fa-chart-column"></i>
+        </div>
+
+        <div>
+            <p>Average Marks</p>
+
+            <h2 id="averageMarks">
+                0%
+            </h2>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+<h3>Attendance</h3>
+
+<p></p>
+
+</div>
+
+<div class="card">
+
+<h3>Assignments</h3>
+
+<p></p>
+
+</div>
+
+<div class="card">
+
+<h3>Top Performer</h3>
+
+<p></p>
+
+</div>
+
+</div>
+
+<div class="activity">
+
+<h2>Recent Activities</h2>
+
+<ul>
+
+<li>✔ Attendance Updated</li>
+
+<li>✔ Assignment Uploaded</li>
+
+<li>✔ Student Added</li>
+
+<li>✔ Marks Published</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/auth.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

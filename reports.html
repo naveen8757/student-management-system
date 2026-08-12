@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Reports | Smart Classroom</title>
+
+    <link
+        rel="stylesheet"
+        href="css/reports.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="reports-container">
+
+    <!-- HEADER -->
+
+    <header class="reports-header">
+
+        <div>
+
+            <h1>
+                <i class="fa-solid fa-chart-column"></i>
+                Classroom Reports
+            </h1>
+
+            <p>
+                Smart Classroom Management System
+            </p>
+
+        </div>
+
+
+        <div class="header-buttons">
+
+            <button
+                onclick="location.href='admin.html'"
+                class="back-btn">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Admin Dashboard
+
+            </button>
+
+
+            <button
+                id="logoutBtn"
+                class="logout-btn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- TITLE -->
+
+    <section class="welcome">
+
+        <h2>
+            Classroom Performance
+        </h2>
+
+        <p>
+            View student and classroom statistics.
+        </p>
+
+    </section>
+
+
+    <!-- REPORT CARDS -->
+
+    <section class="report-grid">
+
+        <div class="report-card">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+            <h3 id="studentCount">
+                0
+            </h3>
+
+            <p>
+                Total Students
+            </p>
+
+        </div>
+
+
+        <div class="report-card">
+
+            <i class="fa-solid fa-chalkboard-user"></i>
+
+            <h3 id="teacherCount">
+                0
+            </h3>
+
+            <p>
+                Total Teachers
+            </p>
+
+        </div>
+
+
+        <div class="report-card">
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+            <h3>
+                Attendance
+            </h3>
+
+            <p>
+                Attendance Report
+            </p>
+
+        </div>
+
+
+        <div class="report-card">
+
+            <i class="fa-solid fa-ranking-star"></i>
+
+            <h3>
+                Marks
+            </h3>
+
+            <p>
+                Student Performance
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- REPORT INFORMATION -->
+
+    <section class="report-section">
+
+        <h2>
+            Available Reports
+        </h2>
+
+
+        <div class="report-list">
+
+            <div class="report-item">
+
+                <div>
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <div>
+
+                        <h3>
+                            Student Report
+                        </h3>
+
+                        <p>
+                            View all registered students.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <button
+                    onclick="location.href='students.html'">
+
+                    View
+
+                </button>
+
+            </div>
+
+
+            <div class="report-item">
+
+                <div>
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <div>
+
+                        <h3>
+                            Attendance Report
+                        </h3>
+
+                        <p>
+                            View student attendance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <button
+                    onclick="location.href='attendance.html'">
+
+                    View
+
+                </button>
+
+            </div>
+
+
+            <div class="report-item">
+
+                <div>
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <div>
+
+                        <h3>
+                            Marks Report
+                        </h3>
+
+                        <p>
+                            View student marks and performance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <button
+                    onclick="location.href='marks.html'">
+
+                    View
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="js/reports.js"></script>
+
+</body>
+
+</html>

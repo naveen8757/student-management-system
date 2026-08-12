@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | SCMS</title>
+
+    <link rel="stylesheet"
+          href="css/admin.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+    <!-- HEADER -->
+
+    <header class="admin-header">
+
+        <div class="brand">
+
+            <img src="logo.png"
+                 alt="CSC Logo">
+
+            <div>
+
+                <h1>SCMS Admin</h1>
+
+                <p>
+                    Computer Science & Engineering
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-user">
+
+            <span>
+                <i class="fa-solid fa-user-shield"></i>
+
+                <span id="adminName">
+                    Admin
+                </span>
+            </span>
+
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- WELCOME -->
+
+    <section class="welcome">
+
+        <h2>
+            Welcome, Administrator 👋
+        </h2>
+
+        <p>
+            Manage teachers, students and classroom activities.
+        </p>
+
+    </section>
+
+
+    <!-- STATISTICS -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-chalkboard-user"></i>
+
+            <div>
+
+                <h3 id="teacherCount">
+                    0
+                </h3>
+
+                <p>
+                    Teachers
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+            <div>
+
+                <h3>
+                    0
+                </h3>
+
+                <p>
+                    Students
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-book"></i>
+
+            <div>
+
+                <h3>
+                    0
+                </h3>
+
+                <p>
+                    Subjects
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <div>
+
+                <h3>
+                    Active
+                </h3>
+
+                <p>
+                    System Status
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADMIN MENU -->
+
+    <section class="admin-menu">
+
+        <h2>
+            Administration
+        </h2>
+
+
+        <div class="menu-grid">
+
+
+            <!-- TEACHERS -->
+
+            <div class="menu-card">
+
+    <i class="fa-solid fa-chalkboard-user"></i>
+
+    <h3>
+        Teacher Management
+    </h3>
+
+    <p>
+        Add, view and remove teachers.
+    </p>
+
+    <button
+        type="button"
+        onclick="document.getElementById('teacherManagement').scrollIntoView({behavior:'smooth'})">
+
+        Manage Teachers
+
+    </button>
+
+</div>
+
+
+            <!-- STUDENTS -->
+
+            <div class="menu-card">
+
+                <i class="fa-solid fa-user-graduate"></i>
+
+                <h3>
+                    Student Management
+                </h3>
+
+                <p>
+                    Manage student information.
+                </p>
+
+                <button
+                    onclick="location.href='students.html'">
+
+                    Manage Students
+
+                </button>
+
+            </div>
+
+
+            <!-- REPORTS -->
+
+            <div class="menu-card">
+
+    <i class="fa-solid fa-chart-column"></i>
+
+    <h3>
+        Reports
+    </h3>
+
+    <p>
+        View classroom performance reports.
+    </p>
+
+    <button
+        type="button"
+        onclick="location.href='reports.html'">
+
+        View Reports
+
+    </button>
+
+</div>
+
+            <!-- SETTINGS -->
+
+            <div class="menu-card">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <h3>
+                    System Settings
+                </h3>
+
+                <p>
+                    Configure the classroom system.
+                </p>
+
+                <button
+                    onclick="location.href='settings.html'">
+
+                    Settings
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- TEACHER MANAGEMENT -->
+
+    <section 
+        class="teacher-management"
+        id="teacherManagement">
+
+        <div class="section-header">
+
+            <div>
+
+                <h2>
+                    Teacher Management
+                </h2>
+
+                <p>
+                    Only Admin can add or remove teachers.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="addTeacherBtn"
+                class="primary-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Teacher
+
+            </button>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+
+                        <th>Username</th>
+
+                        <th>Subject</th>
+
+                        <th>Email</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="teacherTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADD TEACHER MODAL -->
+
+    <div id="teacherModal" class="modal">
+
+        <div class="modal-content">
+
+            <span id="closeModal"class="close">
+                &times;
+            </span>
+
+
+            <h2>
+                <i class="fa-solid fa-chalkboard-user"></i>
+                Add New Teacher
+            </h2>
+
+
+            <form id="teacherForm">
+
+                <label>Teacher Name</label>
+
+                <input
+                    type="text"
+                    id="teacherName"
+                    placeholder="Teacher Name"
+                    required>
+
+                    <label>Username</label>
+                <input
+                    type="text"
+                    id="teacherUsername"
+                    placeholder="Username"
+                    required>
+
+
+                <input
+                    type="email"
+                    id="teacherEmail"
+                    placeholder="Email"
+                    required>
+
+                    <label>Subject</label>
+                <input
+                    type="text"
+                    id="teacherSubject"
+                    placeholder="Subject"
+                    required>
+
+                    <label>Password</label>
+                <input
+                    type="password"
+                    id="teacherPassword"
+                    placeholder="Password"
+                    required>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn">
+
+                    <i class="fa-solid fa-user-plus"></i>
+                    Add Teacher
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Assignments | SCMS</title>
+
+    <link rel="stylesheet"
+          href="css/assignments.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2>SCMS</h2>
+
+        <p class="department">
+            Computer Science & Engineering
+        </p>
+
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+
+            <li>
+                <a href="students.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Students
+                </a>
+            </li>
+
+
+            <li>
+                <a href="attendance.html">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Attendance
+                </a>
+            </li>
+
+
+            <li class="active">
+                <a href="assignments.html">
+                    <i class="fa-solid fa-book"></i>
+                    Assignments
+                </a>
+            </li>
+
+
+            <li>
+                <a href="marks.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Marks
+                </a>
+            </li>
+
+
+            <li>
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+            </li>
+
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+
+            <li id="logout">
+
+                <a href="#">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main">
+
+
+        <!-- HEADER -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Assignment Management</h1>
+
+                <p>
+                    Create and manage classroom assignments
+                </p>
+
+            </div>
+
+
+            <button id="addAssignmentBtn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Assignment
+
+            </button>
+
+        </div>
+
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchAssignment"
+                placeholder="Search assignments..."
+            >
+
+        </div>
+
+
+
+        <!-- ASSIGNMENT CARDS -->
+
+        <div
+            class="assignment-grid"
+            id="assignmentGrid">
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- MODAL -->
+
+<div class="modal" id="assignmentModal">
+
+    <div class="modal-content">
+
+
+        <div class="modal-header">
+
+            <h2>Add Assignment</h2>
+
+            <span id="closeModal">&times;</span>
+
+        </div>
+
+
+        <form id="assignmentForm">
+
+
+            <label>Assignment Title</label>
+
+            <input
+                type="text"
+                id="assignmentTitle"
+                placeholder="Example: HTML Portfolio"
+                required
+            >
+
+
+            <label>Subject</label>
+
+            <select id="assignmentSubject" required>
+
+                <option value="">
+                    -- Select Subject --
+                </option>
+
+                <option value="HTML">
+                    HTML
+                </option>
+
+                <option value="CSS">
+                    CSS
+                </option>
+
+                <option value="JavaScript">
+                    JavaScript
+                </option>
+
+                <option value="Python">
+                    Python
+                </option>
+
+                <option value="Database">
+                    Database
+                </option>
+
+            </select>
+
+
+            <label>Due Date</label>
+
+            <input
+                type="date"
+                id="dueDate"
+                required
+            >
+
+
+            <label>Description</label>
+
+            <textarea
+                id="assignmentDescription"
+                placeholder="Enter assignment details..."
+                rows="4"
+                required
+            ></textarea>
+
+
+            <button type="submit">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Assignment
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="js/auth.js"></script>
+
+<script src="js/assignments.js"></script>
+
+</body>
+
+</html>

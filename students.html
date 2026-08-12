@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management | SCMS</title>
+
+    <link rel="stylesheet"
+          href="css/students.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="students-container">
+
+    <!-- HEADER -->
+
+    <header class="page-header">
+
+        <div>
+
+            <h1>
+                <i class="fa-solid fa-user-graduate"></i>
+                Student Management
+            </h1>
+
+            <p>
+                Smart Classroom Management System
+            </p>
+
+        </div>
+
+
+        <div class="header-buttons">
+
+            <button
+                id="backBtn"
+                class="back-btn">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Admin Dashboard
+
+            </button>
+
+
+            <button
+                id="logoutBtn"
+                class="logout-btn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- TITLE -->
+
+    <section class="welcome">
+
+        <h2>
+            Student Records
+        </h2>
+
+        <p>
+            Add and manage students in your CSC class.
+        </p>
+
+    </section>
+
+
+    <!-- STUDENT STATISTICS -->
+
+    <section class="student-stats">
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <div>
+
+                <h3 id="studentCount">
+                    0
+                </h3>
+
+                <p>
+                    Total Students
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-user-check"></i>
+
+            <div>
+
+                <h3 id="activeCount">
+                    0
+                </h3>
+
+                <p>
+                    Active Students
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STUDENT MANAGEMENT -->
+
+    <section class="student-card">
+
+        <div class="section-header">
+
+            <div>
+
+                <h2>
+                    All Students
+                </h2>
+
+                <p>
+                    Only Admin can add, edit or delete students.
+                </p>
+
+            </div>
+
+
+            <button
+                id="addStudentBtn"
+                class="primary-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Student
+
+            </button>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchStudent"
+                placeholder="Search student by name or roll number...">
+
+        </div>
+
+
+        <!-- TABLE -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Roll No</th>
+
+                        <th>Name</th>
+
+                        <th>Username</th>
+
+                        <th>Email</th>
+
+                        <th>Department</th>
+
+                        <th>Year</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="studentTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADD STUDENT MODAL -->
+
+    <div
+        id="studentModal"
+        class="modal">
+
+        <div class="modal-content">
+
+            <span
+                id="closeModal"
+                class="close">
+
+                &times;
+
+            </span>
+
+
+            <h2>
+                <i class="fa-solid fa-user-plus"></i>
+                Add Student
+            </h2>
+
+
+            <form id="studentForm">
+
+                <label>
+                    Roll Number
+                </label>
+
+                <input
+                    type="text"
+                    id="studentRoll"
+                    placeholder="Example: CSC001"
+                    required>
+
+
+                <label>
+                    Student Name
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Student Name"
+                    required>
+
+
+                <label>
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="studentUsername"
+                    placeholder="Username"
+                    required>
+
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="studentEmail"
+                    placeholder="student@example.com"
+                    required>
+
+
+                <label>
+                    Department
+                </label>
+
+                <input
+                    type="text"
+                    id="studentDepartment"
+                    value="Computer Science"
+                    required>
+
+
+                <label>
+                    Year
+                </label>
+
+                <select
+                    id="studentYear"
+                    required>
+
+                    <option value="">
+                        Select Year
+                    </option>
+
+                    <option value="1st Year">
+                        1st Year
+                    </option>
+
+                    <option value="2nd Year">
+                        2nd Year
+                    </option>
+
+                    <option value="3rd Year">
+                        3rd Year
+                    </option>
+
+                    <option value="4th Year">
+                        4th Year
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="studentPassword"
+                    placeholder="Password"
+                    required>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    Add Student
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/students.js"></script>
+
+</body>
+
+</html>

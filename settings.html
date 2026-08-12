@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | SCMS</title>
+
+    <link
+        rel="stylesheet"
+        href="css/settings.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2>SCMS</h2>
+
+        <p class="department">
+            Computer Science & Engineering
+        </p>
+
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+
+            <li>
+                <a href="students.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Students
+                </a>
+            </li>
+
+
+            <li>
+                <a href="attendance.html">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Attendance
+                </a>
+            </li>
+
+
+            <li>
+                <a href="assignments.html">
+                    <i class="fa-solid fa-book"></i>
+                    Assignments
+                </a>
+            </li>
+
+
+            <li>
+                <a href="marks.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Marks
+                </a>
+            </li>
+
+
+            <li>
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+            </li>
+
+
+            <li class="active">
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+
+            <li id="logout">
+
+                <a href="#">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+
+        <div class="topbar">
+
+            <h1>Settings</h1>
+
+            <p>
+                Manage your classroom system preferences
+            </p>
+
+        </div>
+
+
+
+        <!-- ACCOUNT SETTINGS -->
+
+        <section class="settings-card">
+
+            <h2>
+                <i class="fa-solid fa-user"></i>
+                Account Settings
+            </h2>
+
+
+            <div class="setting-row">
+
+                <div>
+
+                    <h3>Username</h3>
+
+                    <p>
+                        Change the name displayed in SCMS
+                    </p>
+
+                </div>
+
+
+                <div class="username-control">
+
+                    <input
+                        type="text"
+                        id="usernameInput"
+                        placeholder="Enter username">
+
+                    <button id="saveUsername">
+                        Save
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="setting-row">
+
+                <div>
+
+                    <h3>Current Role</h3>
+
+                    <p>
+                        Your current login role
+                    </p>
+
+                </div>
+
+
+                <strong id="currentRole">
+                    -
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- APPEARANCE -->
+
+        <section class="settings-card">
+
+            <h2>
+                <i class="fa-solid fa-palette"></i>
+                Appearance
+            </h2>
+
+
+            <div class="setting-row">
+
+                <div>
+
+                    <h3>Dark Theme</h3>
+
+                    <p>
+                        Use the dark CSC-themed interface
+                    </p>
+
+                </div>
+
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="themeToggle"
+                        checked>
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- NOTIFICATIONS -->
+
+        <section class="settings-card">
+
+            <h2>
+                <i class="fa-solid fa-bell"></i>
+                Notifications
+            </h2>
+
+
+            <div class="setting-row">
+
+                <div>
+
+                    <h3>Assignment Notifications</h3>
+
+                    <p>
+                        Enable assignment reminders
+                    </p>
+
+                </div>
+
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="notificationToggle"
+                        checked>
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- DATA -->
+
+        <section class="settings-card danger-card">
+
+            <h2>
+                <i class="fa-solid fa-database"></i>
+                Project Data
+            </h2>
+
+
+            <div class="setting-row">
+
+                <div>
+
+                    <h3>Clear Classroom Data</h3>
+
+                    <p>
+                        Delete students, attendance,
+                        marks and assignments from this browser.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="clearData"
+                    class="danger-button">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Clear Data
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="js/auth.js"></script>
+
+<script src="js/settings.js"></script>
+
+</body>
+
+</html>
